@@ -10,6 +10,6 @@ for root, dirs, files in os.walk(dr):
         if re.search("\.xml", file):
             spl = root.split("/")
             newname = spl[-1]
-            sup = ("/").join(spl[:-1])
+            sup = "/".join(spl[:-1])
             shutil.move(f"{root}/{file}", f"{sup}/{newname}.xml")
             shutil.rmtree(root)
