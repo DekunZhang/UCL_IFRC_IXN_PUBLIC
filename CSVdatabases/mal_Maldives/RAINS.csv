@@ -1,0 +1,1126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+ 
+
+
+ 
+ 
+ 
+
+
+<html>
+<head>
+<title>DesConsultar on-line Main Menu</title>
+</head>
+
+
+<meta name="description" content="DesInventar Sendai Server 10.1 Official Open Source Project site. A UNDRR initiative to compile disaster databases, sponsored by the United Nations International Strategy for Disaster Reduction UNDRR and United Nations Development Program UNDP" />
+<meta name="keywords" content="DesInventar, Disaster database, loss databases, risk assessment, disaster impacts, climate change, Flood, Drought, Earthquake, Cyclone, Landslide, Tsunami, Fire " />
+<meta name="author" content="LA RED - UNDRR" />
+<link href="/DesInventar/html/desinventar.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<body marginheight="0" topmargin="0" leftmargin="0"  marginwidth="0" class="bodyclass" style="position:absolute;">
+<script type="text/javascript" src="/DesInventar/html/header.js"></script>
+<div  id="topheader" class="mainheader_headder">
+  <div class="mainheader_headderbase" >
+	<div id="ribbon"></div>
+	<div class="wrapper" style="margin-top: -5px;">
+		<ul>
+			<li style="width:110px; font-size:20px; font-weight:500"><img style="vertical-align:middle"
+			alt="Image" height="30" src="/DesInventar/images/un_rev.png"/> <span>UNDRR</span></li>
+			<li>DesInventar Sendai</li>
+			<li style="float: right;margin-right:190px"><img alt="Image unavailable" src="/DesInventar/images/icon-grid-menu.gif" /></li>
+		</ul>
+	</div>
+  </div>
+</div>
+<div id="topnavigation" class="mainheader_mainnav" style="width: 100%; margin-top: -17px;">
+  <div class="mainheader_navbase" >
+   <ul>
+ 		<li style="width: 170px; height: 50px;margin-left:0px;margin-top:0px;">
+			<ul style="margin-left:0px;margin-top:0px;">
+				<li style="margin-left:0px;font-size:17px;width: 720px; height: 15px;">
+					<ul style="display:inline;white-space:nowrap;">
+					<li style="margin-left:0px;"><div class="mainheader_square" style="background-color: #af1d32;"></div></li>
+					<li style="margin-left:5px;"><div class="mainheader_square" style="background-color: #923c85;"></div></li>
+					<li style="margin-left:5px;"><div class="mainheader_square" style="background-color: #e26837;"></div></li>
+					<li style="margin-left:5px;"><div class="mainheader_square" style="background-color: #04aaa0;"></div></li>
+					</ul>
+				</li>
+<!--
+INDISDATA
+               <li style="margin-left:5px;"><img alt="IndisData" src="/DesInventar/images/logoInDisData_lg.png" height="70"/></li>              
+-->
+				<li id="sendai_framework">SENDAI FRAMEWORK</li>
+				<li id="disaster_risk_reduction">FOR DISASTER RISK REDUCTION</li>
+			</ul>
+        </li>
+        <li>
+			 <ul class="mainheader_top_menu"  style="top:50px;">
+				<li style="margin-left:25px;"><a href="/">HOME</a></li>
+				<li style="margin-left:25px;"><a href="/DesInventar/index.jsp">Analysis</a></li>
+				<li style="margin-left:25px;"><a href="/DesInventar/inv/index.jsp">Administration</a></li>
+				<li style="margin-left:25px;"><a href="/DesInventar/download.jsp">Download</a></li>
+				<li style="margin-left:25px;"><a href="/DesInventar/about.jsp">About</a></li>
+				<li style="margin-left:25px;"><a href="javascript:getBookmark()">Get bookmark</a></li>
+             </ul>
+        </li>
+        <li style="position:absolute;top:40px;left:750px;">
+            <ul class="mainheader_headericons" style="white-space:nowrap;">
+                <li style="margin-right:7px;">
+                    &nbsp;<form name="lang" >
+                        <select class="bss"  style="margin-left: 13px;margin-right:7px;margin-top: -27px;" name="langselect" onChange="switchLanguage()">
+                            <option value='EN' selected>English</option>
+                            <option value='ES'>Espa&ntilde;ol</option>
+                            <option value='PT'>Português</option>
+                            <option value='FR'>Fran&ccedil;ais</option>
+                            <option value='RU'>Russian</option>
+                            <option value='ZN'>Chinese</option>
+                            <option value='AR'>Arabic</option>
+                            <option value='AL'>Albanian</option>
+                            <option value='ID'>Bahasa</option>
+                            <option value='IR'>Farsi</option>
+                            <option value='LA'>Lao</option>
+                            <option value='TH'>Thai</option>
+                            <option value='MN'>Mongolian</option>
+                            <option value='SR'>Serbian</option>
+                            <option value='BH'>BHS</option>
+                            <option value='ME'>Montenegrin</option>
+                            <option value='VN'>Vietnamese</option>
+                        </select>
+                    </form>
+                </li>
+                <li>
+                    <a href="javascript:doHelp()"><img alt="Image unavailable" src="/DesInventar/images/questioncircle.jpg"  style="vertical-align:middle"/></a>
+                    <a href="/DesInventar/inv/logout.jsp"><img alt="Image unavailable" src="/DesInventar/images/logout.jpg"  style="vertical-align:middle"/></a>
+                </li>
+            </ul>
+        </li>
+   </ul>
+  </div>
+</div>
+
+<div class="welcomeheadder">
+  <div class="navbase">
+    <div class="welcome"><strong>Welcome</strong> to DesInventar, a free, open source Disaster Information Management System</div>
+  </div>
+</div>
+<table width="1000" cellspacing="2" cellpadding="0" border="1" class="pageBackground" rules="none">
+<tr>
+    <td align="center">
+     <font class='subtitle'>Please select the region database to query:</FONT><br><br>
+</tr>
+<tr><td>
+<table width="99%" cellspacing="0" cellpadding="2" border="1" rules="none">
+<tr class="bodydarklight">
+    <th width=30>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th align="left">Country/Region<!-- Country or Region --></th>
+    <th align="left">Period<!-- Period --></th>
+    <th align="left">Institution<!-- Institution --></th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+</tr>
+<tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=alb&continue=y">
+	Albania</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=alb&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=alb&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1851 - 2022</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=alb&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=ago&continue=y">
+	Angola</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=ago&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=ago&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1917 - 2021</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=ago&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=atg&continue=y">
+	Antigua and Barbuda</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=atg&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=atg&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1950 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=atg&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=arg&continue=y">
+	Argentina</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=arg&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=arg&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1970 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=arg&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=brb&continue=y">
+	Barbados</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=brb&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=brb&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1099 - 2017</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=brb&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=blz&continue=y">
+	Belize</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=blz&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=blz&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1931 - 2011</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=blz&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=btn&continue=y">
+	Bhutan</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=btn&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=btn&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2009 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=btn&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=bol&continue=y">
+	Bolivia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=bol&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=bol&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1970 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=bol&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=bfa&continue=y">
+	Burkina Faso</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=bfa&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=bfa&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1974 - 2016</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=bfa&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=khm&continue=y">
+	Cambodia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=khm&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=khm&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1996 - 2020</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=khm&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=chl&continue=y">
+	Chile</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=chl&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=chl&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1970 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=chl&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=col&continue=y">
+	Colombia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=col&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=col&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1914 - 2018</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=col&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=com&continue=y">
+	Comoros</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=com&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=com&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1808 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=com&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=cri&continue=y">
+	Costa Rica</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=cri&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=cri&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1968 - 2019</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=cri&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=dji&continue=y">
+	Djibouti</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=dji&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=dji&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1944 - 2012</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=dji&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=dma&continue=y">
+	Dominica</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=dma&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=dma&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1951 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=dma&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=dom&continue=y">
+	Dominican Republic</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=dom&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=dom&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1966 - 2000</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=dom&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=ecu&continue=y">
+	Ecuador</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=ecu&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=ecu&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1970 - 2019</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=ecu&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=egy&continue=y">
+	Egypt</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=egy&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=egy&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2010</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=egy&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=slv&continue=y">
+	El Salvador</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=slv&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=slv&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1900 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=slv&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=gnq&continue=y">
+	Equatorial Guinea</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=gnq&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=gnq&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2010 - 2021</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=gnq&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=swz&continue=y">
+	Eswatini</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=swz&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=swz&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2011 - 2019</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=swz&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=eth&continue=y">
+	Ethiopia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=eth&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=eth&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1899 - 2019</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=eth&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=gmb&continue=y">
+	Gambia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=gmb&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=gmb&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1899 - 2018</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=gmb&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=gha&continue=y">
+	Ghana</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=gha&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=gha&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>201 - 2018</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=gha&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=grd&continue=y">
+	Grenada</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=grd&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=grd&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1771 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=grd&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=gtm&continue=y">
+	Guatemala</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=gtm&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=gtm&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1988 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=gtm&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=gin&continue=y">
+	Guinea</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=gin&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=gin&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2014 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=gin&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=gnb&continue=y">
+	Guinea Bissau</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=gnb&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=gnb&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2017 - 2018</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=gnb&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=guy&continue=y">
+	Guyana</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=guy&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=guy&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1972 - 2013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=guy&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=hnd&continue=y">
+	Honduras</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=hnd&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=hnd&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1915 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=hnd&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=ng_oy&continue=y">
+	Ibadan Metropolis</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=ng_oy&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=ng_oy&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1991 - 2016</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=ng_oy&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=idn&continue=y">
+	Indonesia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=idn&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=idn&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1815 - 2019</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=idn&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=irn&continue=y">
+	I.R. Iran</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=irn&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=irn&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1895 - 2011</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=irn&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=jam&continue=y">
+	Jamaica</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=jam&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=jam&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1973 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=jam&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=jor&continue=y">
+	Jordan</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=jor&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=jor&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1981 - 2020</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=jor&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=ken&continue=y">
+	Kenya</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=ken&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=ken&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1997 - 2022</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=ken&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=xkx&continue=y">
+	Kosovo</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=xkx&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=xkx&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1456 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=xkx&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=lao&continue=y">
+	Laos</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=lao&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=lao&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1990 - 2012</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=lao&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=lbn&continue=y">
+	Lebanon</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=lbn&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=lbn&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2021</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=lbn&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=lbr&continue=y">
+	Liberia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=lbr&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=lbr&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2014 - 2016</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=lbr&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mdg&continue=y">
+	Madagascar</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mdg&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mdg&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1982 - 2018</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mdg&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mwi&continue=y">
+	Malawi</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mwi&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mwi&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1899 - 2018</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mwi&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mdv&continue=y">
+	Maldives</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mdv&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mdv&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1894 - 2008</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mdv&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mli&continue=y">
+	Mali</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mli&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mli&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1906 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mli&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mus&continue=y">
+	Mauritius</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mus&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mus&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1960 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mus&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mex&continue=y">
+	Mexico</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mex&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mex&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1970 - 2013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mex&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mng&continue=y">
+	Mongolia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mng&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mng&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2006 - 2019</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mng&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mne&continue=y">
+	Montenegro</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mne&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mne&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1979 - 2022</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mne&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mar&continue=y">
+	Morocco</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mar&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mar&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1960 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mar&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=moz&continue=y">
+	Mozambique</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=moz&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=moz&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1979 - 2022</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=moz&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=mmr&continue=y">
+	Myanmar</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=mmr&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=mmr&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1952 - 2020</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=mmr&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=npl&continue=y">
+	Nepal</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=npl&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=npl&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1971 - 2013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=npl&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=nic&continue=y">
+	Nicaragua</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=nic&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=nic&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1992 - 2013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=nic&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=ner&continue=y">
+	Niger</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=ner&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=ner&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1973 - 2021</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=ner&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=019&continue=y">
+	Orissa (India)</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=019&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=019&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1970 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=019&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=pac&continue=y">
+	Pacific Islands (PDN)</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=pac&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=pac&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1567 - 2021</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=pac&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=pak&continue=y">
+	Pakistan</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=pak&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=pak&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=pak&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=pse&continue=y">
+	Palestine</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=pse&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=pse&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=pse&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=pan&continue=y">
+	Panama</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=pan&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=pan&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1933 - 2020</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=pan&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=pry&continue=y">
+	Paraguay</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=pry&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=pry&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1978 - 2017</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=pry&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=per&continue=y">
+	Peru</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=per&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=per&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1970 - 2013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=per&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=rwa&continue=y">
+	Rwanda</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=rwa&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=rwa&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2016</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=rwa&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=kna&continue=y">
+	Saint Kitts and Nevis</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=kna&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=kna&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1626 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=kna&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=lca&continue=y">
+	Saint Lucia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=lca&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=lca&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1760 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=lca&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=vct&continue=y">
+	Saint Vincent and the Grenadines</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=vct&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=vct&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1718 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=vct&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=sen&continue=y">
+	Senegal</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=sen&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=sen&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=sen&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=srb&continue=y">
+	Serbia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=srb&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=srb&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2022</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=srb&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=syc&continue=y">
+	Seychelles</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=syc&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=syc&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=syc&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=sle&continue=y">
+	Sierra Leone</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=sle&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=sle&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>2006 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=sle&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=esp&continue=y">
+	Spain</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=esp&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=esp&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1 - 2010</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=esp&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=lka&continue=y">
+	Sri Lanka</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=lka&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=lka&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1965 - 2020</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=lka&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=syr&continue=y">
+	Syria</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=syr&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=syr&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1980 - 2009</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=syr&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=033&continue=y">
+	Tamil Nadu (India)</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=033&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=033&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1968 - 2011</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=033&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=tls&continue=y">
+	Timor Leste</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=tls&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=tls&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1992 - 2017</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=tls&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=tgo&continue=y">
+	Togo</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=tgo&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=tgo&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1960 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=tgo&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=tto&continue=y">
+	Trinidad and Tobago</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=tto&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=tto&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1899 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=tto&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=tun&continue=y">
+	Tunisia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=tun&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=tun&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1982 - 2013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=tun&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=tur&continue=y">
+	Turkey</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=tur&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=tur&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1894 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=tur&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=uga&continue=y">
+	Uganda</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=uga&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=uga&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1933 - 2020</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=uga&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=tza&continue=y">
+	United Republic  of Tanzania</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=tza&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=tza&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1872 - 2021</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=tza&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=ury&continue=y">
+	Uruguay</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=ury&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=ury&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1959 - 2014</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=ury&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=005&continue=y">
+	Uttarakhand (India)</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=005&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=005&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1984 - 3013</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=005&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=ven&continue=y">
+	Venezuela</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=ven&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=ven&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>201 - 2015</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=ven&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=vnm&continue=y">
+	Vietnam</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=vnm&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=vnm&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1989 - 2019</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=vnm&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodymedlight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=yem&continue=y">
+	Yemen</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=yem&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=yem&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1979 - 2022</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=yem&lang=EN">Profile</a></td>
+	</tr><tr class='bss bodylight'>
+    <td width=30>&nbsp;</td>
+	<td nowrap><a class="blackLinks" href="/DesInventar/profiletab.jsp?countrycode=zmb&continue=y">
+	Zambia</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/main.jsp?countrycode=zmb&lang=EN">Query</a>&nbsp;&nbsp;&nbsp;
+		    <a  class="greyText" href="/DesInventar/thematic_google.jsp?countrycode=zmb&lang=EN&bookmark=1&maxhits=100&lang=EN&logic=AND&sortby=0&frompage=/thematic_def.jsp&_range=,1.0,3.0,10.0,30.0,100.0,1000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0&_color=%23ffff88,%23ffcc00,%23ff8800,%23ff0000,%23bb0000,%23770000,%23330000,,,,,,,,&_legend=,,,,,,,,,,,,,&chartColor=1&chartX=1000&chartY=600&chartTitle=&chartSubTitle=&showValues=0&legendType=0&level_rep=0&level_map=1&_variables=1">Map</a>&nbsp;&nbsp;&nbsp;
+	</td>
+	<td nowrap>1999 - 2017</td>
+	<td></td>
+	<td nowrap><a  class="greyText" href="/DesInventar/country_profile.jsp?countrycode=zmb&lang=EN">Profile</a></td>
+	</tr>
+</table>
+</td>
+</tr>
+<tr>
+    <td align="center" colspan=4  nowrap>
+	 	
+     <A  class="linkText" href="/DesInventar/inv/login.jsp" class='linkText'>Members Login here<!-- Members Login here--></a>
+   
+    </td>
+ </tr>
+</table>
+<FORM NAME="desinventar" action="index.jsp" method="post">
+<input type="hidden" name="usrtkn" id="usrtkn" value="02a9a60e-31cd-4769-866b-2dfd3f49fd44"> 
+</FORM>
+<script language="JavaScript">
+sTipalb= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Albania\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 9323\<br\>Period:\<dataperiod/\>1851 - 2022\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE:  850 Deaths; 555 DataCards\<br\>FLOOD:  270 Deaths; 924 DataCards\<br\>OTHER:  101 Deaths; 36 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  81654 Houses; 555 DataCards\<br\>FLOOD:  19444 Houses; 924 DataCards\<br\>FLASH FLOOD:  13865 Houses; 192 DataCards\</td\>\</tr\>\</table\>';
+sTipago= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Angola\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 199\<br\>Period:\<dataperiod/\>1917 - 2021\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  1025 Deaths; 12 DataCards\<br\>FLOOD:  728 Deaths; 89 DataCards\<br\>Heavy Rain With Lightnings:  416 Deaths; 24 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>DROUGHT:  30686 Houses; 10 DataCards\<br\>FLOOD:  23214 Houses; 89 DataCards\<br\>Heavy Rain With Lightnings:  6575 Houses; 24 DataCards\</td\>\</tr\>\</table\>';
+sTipatg= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Antigua and Barbuda\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 503\<br\>Period:\<dataperiod/\>1950 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>HURRICANE:  13 Deaths; 129 DataCards\<br\>FIRE:  10 Deaths; 29 DataCards\<br\>ACCIDENT:  6 Deaths; 13 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>HURRICANE:  13471 Houses; 129 DataCards\<br\>EARTHQUAKE:  1000 Houses; 1 DataCards\<br\>FIRE:  23 Houses; 29 DataCards\</td\>\</tr\>\</table\>';
+sTiparg= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Argentina\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 21494\<br\>Period:\<dataperiod/\>1970 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  1085 Deaths; 2136 DataCards\<br\>EPIDEMIC:  942 Deaths; 699 DataCards\<br\>FLOOD:  778 Deaths; 6997 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  609857 Houses; 6997 DataCards\<br\>STORM:  50455 Houses; 3117 DataCards\<br\>EARTHQUAKE:  19535 Houses; 158 DataCards\</td\>\</tr\>\</table\>';
+sTipbrb= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Barbados\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2478\<br\>Period:\<dataperiod/\>1099 - 2017\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  99 Deaths; 1517 DataCards\<br\>STRUCTURE:  7 Deaths; 108 DataCards\<br\>LANDSLIDE:  6 Deaths; 56 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FIRE:  1842 Houses; 1517 DataCards\<br\>STRONGWIND:  241 Houses; 95 DataCards\<br\>FLOOD:  111 Houses; 194 DataCards\</td\>\</tr\>\</table\>';
+sTipblz= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Belize\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 129\<br\>Period:\<dataperiod/\>1931 - 2011\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>HURRICANE:  2832 Deaths; 75 DataCards\<br\>ACCIDENT:  11 Deaths; 7 DataCards\<br\>FLOOD:  7 Deaths; 29 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>HURRICANE:  23169 Houses; 75 DataCards\<br\>FLOOD:  1291 Houses; 29 DataCards\<br\>FIRE:  296 Houses; 11 DataCards\</td\>\</tr\>\</table\>';
+sTipbtn= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Bhutan\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 308\<br\>Period:\<dataperiod/\>2009 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE:  15 Deaths; 36 DataCards\<br\>FLOOD:  12 Deaths; 18 DataCards\<br\>FIRE:  6 Deaths; 12 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  14637 Houses; 36 DataCards\<br\>WINDSTORM:  3639 Houses; 216 DataCards\<br\>FIRE:  153 Houses; 12 DataCards\</td\>\</tr\>\</table\>';
+sTipbol= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Bolivia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 5498\<br\>Period:\<dataperiod/\>1970 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  1332 Deaths; 242 DataCards\<br\>FLOOD:  415 Deaths; 2309 DataCards\<br\>LANDSLIDE:  392 Deaths; 423 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  13273 Houses; 2309 DataCards\<br\>LANDSLIDE:  4630 Houses; 423 DataCards\<br\>STRONGWIND:  4315 Houses; 115 DataCards\</td\>\</tr\>\</table\>';
+sTipbfa= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Burkina Faso\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 42003\<br\>Period:\<dataperiod/\>1974 - 2016\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>MENINGITIS:  9870 Deaths; 27945 DataCards\<br\>TRAFIC ACCIDENT:  262 Deaths; 49 DataCards\<br\>EPIZOOTIE:  230 Deaths; 13 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  12916 Houses; 650 DataCards\<br\>STRONG WIND:  1891 Houses; 61 DataCards\<br\>STRONG RAIN:  1257 Houses; 2653 DataCards\</td\>\</tr\>\</table\>';
+sTipkhm= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Cambodia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 10379\<br\>Period:\<dataperiod/\>1996 - 2020\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLOOD:  1243 Deaths; 3722 DataCards\<br\>LIGHTNING:  1191 Deaths; 1076 DataCards\<br\>FIRE:  184 Deaths; 2017 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>STORM:  56244 Houses; 1963 DataCards\<br\>FLOOD:  34211 Houses; 3722 DataCards\<br\>FIRE:  6203 Houses; 2017 DataCards\</td\>\</tr\>\</table\>';
+sTipchl= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Chile\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 12896\<br\>Period:\<dataperiod/\>1970 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  1900 Deaths; 3381 DataCards\<br\>EARTHQUAKE:  909 Deaths; 461 DataCards\<br\>ACCIDENT:  395 Deaths; 273 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  1871013 Houses; 461 DataCards\<br\>STORM:  151267 Houses; 2274 DataCards\<br\>FLOOD:  86956 Houses; 650 DataCards\</td\>\</tr\>\</table\>';
+sTipcol= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Colombia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 53605\<br\>Period:\<dataperiod/\>1914 - 2018\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ERUPTION:  24539 Deaths; 65 DataCards\<br\>LANDSLIDE:  7313 Deaths; 10438 DataCards\<br\>EARTHQUAKE:  2756 Deaths; 1015 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  1314415 Houses; 16855 DataCards\<br\>STRONGWIND:  308810 Houses; 5548 DataCards\<br\>EARTHQUAKE:  137760 Houses; 1015 DataCards\</td\>\</tr\>\</table\>';
+sTipcom= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Comoros\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 160\<br\>Period:\<dataperiod/\>1808 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>CYCLONE:  531 Deaths; 5 DataCards\<br\>PLAGUE:  301 Deaths; 7 DataCards\<br\>ACCIDENT:  292 Deaths; 9 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>CYCLONE:  1611 Houses; 5 DataCards\<br\>ERUPTION:  293 Houses; 29 DataCards\<br\>FLOOD:  269 Houses; 75 DataCards\</td\>\</tr\>\</table\>';
+sTipcri= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Costa Rica\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 18440\<br\>Period:\<dataperiod/\>1968 - 2019\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Corriente de resaca:  787 Deaths; 787 DataCards\<br\>LANDSLIDE:  221 Deaths; 3901 DataCards\<br\>FLOOD:  129 Deaths; 8699 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  56084 Houses; 8699 DataCards\<br\>EARTHQUAKE:  18310 Houses; 374 DataCards\<br\>LANDSLIDE:  4885 Houses; 3901 DataCards\</td\>\</tr\>\</table\>';
+sTipdji= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Djibouti\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1177\<br\>Period:\<dataperiod/\>1944 - 2012\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ACCIDENT:  430 Deaths; 57 DataCards\<br\>FLOOD:  321 Deaths; 88 DataCards\<br\>Naufrage:  213 Deaths; 14 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>ACCIDENT:  0 Houses; 57 DataCards\<br\>attaque animal:  0 Houses; 11 DataCards\<br\>BIOLOGICAL:  0 Houses; 3 DataCards\</td\>\</tr\>\</table\>';
+sTipdma= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Dominica\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 431\<br\>Period:\<dataperiod/\>1951 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ACCIDENT:  48 Deaths; 19 DataCards\<br\>HURRICANE:  48 Deaths; 91 DataCards\<br\>LANDSLIDE:  23 Deaths; 40 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>HURRICANE:  11002 Houses; 91 DataCards\<br\>EARTHQUAKE:  150 Houses; 3 DataCards\<br\>FLOOD:  99 Houses; 30 DataCards\</td\>\</tr\>\</table\>';
+sTipdom= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Dominican Republic\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2112\<br\>Period:\<dataperiod/\>1966 - 2000\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  338 Deaths; 209 DataCards\<br\>FLOOD:  231 Deaths; 464 DataCards\<br\>FIRE:  158 Deaths; 522 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  5775 Houses; 464 DataCards\<br\>FIRE:  1778 Houses; 522 DataCards\<br\>STRONGWIND:  329 Houses; 124 DataCards\</td\>\</tr\>\</table\>';
+sTipecu= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Ecuador\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 39248\<br\>Period:\<dataperiod/\>1970 - 2019\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ACCIDENT:  3338 Deaths; 630 DataCards\<br\>LANDSLIDE:  1642 Deaths; 7771 DataCards\<br\>Accidente de tránsito:  1461 Deaths; 1795 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  94895 Houses; 4705 DataCards\<br\>EARTHQUAKE:  27956 Houses; 646 DataCards\<br\>RAIN:  10640 Houses; 691 DataCards\</td\>\</tr\>\</table\>';
+sTipegy= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Egypt\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 83\<br\>Period:\<dataperiod/\>1980 - 2010\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ROAD ACCIDENT:  43 Deaths; 2 DataCards\<br\>FIRE:  36 Deaths; 4 DataCards\<br\>LIQUEFACTION:  9 Deaths; 38 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>LIQUEFACTION:  2969 Houses; 38 DataCards\<br\>EARTHQUAKE:  239 Houses; 13 DataCards\<br\>FLOOD:  6 Houses; 1 DataCards\</td\>\</tr\>\</table\>';
+sTipslv= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>El Salvador\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 8477\<br\>Period:\<dataperiod/\>1900 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE:  2320 Deaths; 608 DataCards\<br\>LANDSLIDE:  1486 Deaths; 1162 DataCards\<br\>FLOOD:  1002 Deaths; 2192 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  342484 Houses; 608 DataCards\<br\>FLOOD:  50406 Houses; 2192 DataCards\<br\>STRONGWIND:  8295 Houses; 273 DataCards\</td\>\</tr\>\</table\>';
+sTipgnq= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Equatorial Guinea\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 162\<br\>Period:\<dataperiod/\>2010 - 2021\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ACCIDENT:  17 Deaths; 35 DataCards\<br\>FIRE:  15 Deaths; 115 DataCards\<br\>EPIDEMIC:  4 Deaths; 1 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FIRE:  655 Houses; 115 DataCards\<br\>ACCIDENT:  143 Houses; 35 DataCards\<br\>FLOOD:  23 Houses; 6 DataCards\</td\>\</tr\>\</table\>';
+sTipswz= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Eswatini\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 227\<br\>Period:\<dataperiod/\>2011 - 2019\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>STORM:  2 Deaths; 141 DataCards\<br\>WINDSTORM:  1 Deaths; 11 DataCards\<br\>FIRE:  0 Deaths; 4 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>STORM:  969 Houses; 141 DataCards\<br\>WINDSTORM:  220 Houses; 11 DataCards\<br\>HAILSTORM:  66 Houses; 8 DataCards\</td\>\</tr\>\</table\>';
+sTipeth= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Ethiopia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 14706\<br\>Period:\<dataperiod/\>1899 - 2019\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>DROUGHT:  3920 Deaths; 3983 DataCards\<br\>FLOOD:  3272 Deaths; 1418 DataCards\<br\>CONFLICT:  1610 Deaths; 348 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>CONFLICT:  318536 Houses; 348 DataCards\<br\>FLOOD:  22275 Houses; 1418 DataCards\<br\>FIRE:  5281 Houses; 792 DataCards\</td\>\</tr\>\</table\>';
+sTipgmb= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Gambia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 3417\<br\>Period:\<dataperiod/\>1899 - 2018\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Fire Out break:  2 Deaths; 52 DataCards\<br\>Flashflood:  1 Deaths; 2267 DataCards\<br\>WINDSTORM:  0 Deaths; 50 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLASH FLOOD:  1093 Houses; 306 DataCards\<br\>WINDSTORM:  884 Houses; 50 DataCards\<br\>Flashflood:  723 Houses; 2267 DataCards\</td\>\</tr\>\</table\>';
+sTipgha= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Ghana\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1337\<br\>Period:\<dataperiod/\>201 - 2018\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EXPLOSION:  100 Deaths; 3 DataCards\<br\>RAINSTORM:  77 Deaths; 482 DataCards\<br\>DOMESTIC FIRE:  72 Deaths; 354 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>RAINSTORM:  13684 Houses; 482 DataCards\<br\>FLOOD:  6021 Houses; 244 DataCards\<br\>WINDSTORM:  1177 Houses; 116 DataCards\</td\>\</tr\>\</table\>';
+sTipgrd= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Grenada\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 131\<br\>Period:\<dataperiod/\>1771 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  4940 Deaths; 10 DataCards\<br\>HURRICANE:  116 Deaths; 27 DataCards\<br\>OTHER:  65 Deaths; 3 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>HURRICANE:  33344 Houses; 27 DataCards\<br\>LANDSLIDE:  552 Houses; 5 DataCards\<br\>STORM:  114 Houses; 19 DataCards\</td\>\</tr\>\</table\>';
+sTipgtm= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Guatemala\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 7551\<br\>Period:\<dataperiod/\>1988 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>LANDSLIDE:  1210 Deaths; 1627 DataCards\<br\>RAIN:  780 Deaths; 841 DataCards\<br\>EPIDEMIC:  714 Deaths; 160 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>RAIN:  127711 Houses; 841 DataCards\<br\>FLOOD:  73850 Houses; 1554 DataCards\<br\>EARTHQUAKE:  42174 Houses; 239 DataCards\</td\>\</tr\>\</table\>';
+sTipgin= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Guinea\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 44\<br\>Period:\<dataperiod/\>2014 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  1816 Deaths; 44 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EPIDEMIC:  0 Houses; 44 DataCards\</td\>\</tr\>\</table\>';
+sTipgnb= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Guinea Bissau\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 93\<br\>Period:\<dataperiod/\>2017 - 2018\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>NAVIGATION ACCIDENT:  20 Deaths; 18 DataCards\<br\>FIRE:  5 Deaths; 67 DataCards\<br\>TSUNAMI:  4 Deaths; 3 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>WINDSTORM:  182 Houses; 5 DataCards\<br\>FIRE:  102 Houses; 67 DataCards\<br\>NAVIGATION ACCIDENT:  0 Houses; 18 DataCards\</td\>\</tr\>\</table\>';
+sTipguy= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Guyana\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 894\<br\>Period:\<dataperiod/\>1972 - 2013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>OTHER:  914 Deaths; 5 DataCards\<br\>FIRE:  82 Deaths; 547 DataCards\<br\>EPIDEMIC:  31 Deaths; 8 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  112379 Houses; 250 DataCards\<br\>FIRE:  841 Houses; 547 DataCards\<br\>STRONGWIND:  715 Houses; 14 DataCards\</td\>\</tr\>\</table\>';
+sTiphnd= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Honduras\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 13224\<br\>Period:\<dataperiod/\>1915 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLOOD:  9895 Deaths; 2655 DataCards\<br\>Tormenta Tropical:  1521 Deaths; 42 DataCards\<br\>EPIDEMIC:  973 Deaths; 3710 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  148847 Houses; 2655 DataCards\<br\>HURRICANE:  14994 Houses; 69 DataCards\<br\>EARTHQUAKE:  8197 Houses; 209 DataCards\</td\>\</tr\>\</table\>';
+sTipng_oy= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Ibadan Metropolis\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2427\<br\>Period:\<dataperiod/\>1991 - 2016\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Vehicle Accident:  1080 Deaths; 805 DataCards\<br\>Crime:  324 Deaths; 456 DataCards\<br\>Fire:  198 Deaths; 103 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Rainstorm:  16078 Houses; 30 DataCards\<br\>Flood:  12214 Houses; 60 DataCards\<br\>Fire:  1969 Houses; 103 DataCards\</td\>\</tr\>\</table\>';
+sTipidn= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Indonesia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 33007\<br\>Period:\<dataperiod/\>1815 - 2019\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE AND TSUNAMI:  132999 Deaths; 27 DataCards\<br\>ERUPTION:  78634 Deaths; 245 DataCards\<br\>FLOODS:  21932 Deaths; 10438 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  623901 Houses; 649 DataCards\<br\>EARTHQUAKE AND TSUNAMI:  242377 Houses; 27 DataCards\<br\>FLOODS:  214207 Houses; 10438 DataCards\</td\>\</tr\>\</table\>';
+sTipirn= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>I.R. Iran\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 17194\<br\>Period:\<dataperiod/\>1895 - 2011\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE:  183186 Deaths; 5710 DataCards\<br\>FLOOD:  14943 Deaths; 6579 DataCards\<br\>ACCIDENT:  8228 Deaths; 1825 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  383445 Houses; 6579 DataCards\<br\>EARTHQUAKE:  324293 Houses; 5710 DataCards\<br\>FLASH FLOOD:  500 Houses; 1 DataCards\</td\>\</tr\>\</table\>';
+sTipjam= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Jamaica\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1119\<br\>Period:\<dataperiod/\>1973 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  369 Deaths; 174 DataCards\<br\>FLOOD:  98 Deaths; 318 DataCards\<br\>HURRICANE:  85 Deaths; 105 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>HURRICANE:  166182 Houses; 105 DataCards\<br\>STORM:  11356 Houses; 40 DataCards\<br\>FLOOD:  2731 Houses; 318 DataCards\</td\>\</tr\>\</table\>';
+sTipjor= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Jordan\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 717\<br\>Period:\<dataperiod/\>1981 - 2020\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLASH FLOOD:  68 Deaths; 52 DataCards\<br\>FLOOD:  52 Deaths; 100 DataCards\<br\>ACCIDENT:  35 Deaths; 29 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>SNOWSTORM:  388 Houses; 164 DataCards\<br\>EARTHQUAKE:  91 Houses; 38 DataCards\<br\>FLOOD:  69 Houses; 100 DataCards\</td\>\</tr\>\</table\>';
+sTipken= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Kenya\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 8917\<br\>Period:\<dataperiod/\>1997 - 2022\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ROAD ACCIDENT:  4910 Deaths; 4245 DataCards\<br\>FIRE:  1939 Deaths; 1248 DataCards\<br\>DROWNING:  1311 Deaths; 1212 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  30298 Houses; 742 DataCards\<br\>FIRE:  5547 Houses; 1248 DataCards\<br\>LANDSLIDE:  215 Houses; 63 DataCards\</td\>\</tr\>\</table\>';
+sTipxkx= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Kosovo\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1509\<br\>Period:\<dataperiod/\>1456 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  14 Deaths; 17 DataCards\<br\>AVALANCHE:  10 Deaths; 1 DataCards\<br\>FOG:  5 Deaths; 1 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  7571 Houses; 16 DataCards\<br\>WINDSTORM:  7068 Houses; 34 DataCards\<br\>FLOOD:  3802 Houses; 294 DataCards\</td\>\</tr\>\</table\>';
+sTiplao= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Laos\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 4215\<br\>Period:\<dataperiod/\>1990 - 2012\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  186 Deaths; 100 DataCards\<br\>FLOOD:  148 Deaths; 1286 DataCards\<br\>ACCIDENT:  92 Deaths; 42 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  72978 Houses; 1286 DataCards\<br\>STORM:  52997 Houses; 741 DataCards\<br\>DROUGHT:  6186 Houses; 165 DataCards\</td\>\</tr\>\</table\>';
+sTiplbn= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Lebanon\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2414\<br\>Period:\<dataperiod/\>1980 - 2021\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Explosion:  215 Deaths; 1 DataCards\<br\>Winter Storm:  92 Deaths; 316 DataCards\<br\>River Flood:  17 Deaths; 43 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Explosion:  75850 Houses; 1 DataCards\<br\>Winter Storm:  856 Houses; 316 DataCards\<br\>Torrent:  312 Houses; 39 DataCards\</td\>\</tr\>\</table\>';
+sTiplbr= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Liberia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 77\<br\>Period:\<dataperiod/\>2014 - 2016\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  3482 Deaths; 76 DataCards\<br\>ANIMAL INCIDENT:  0 Deaths; 1 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>ANIMAL INCIDENT:  0 Houses; 1 DataCards\<br\>EPIDEMIC:  0 Houses; 76 DataCards\</td\>\</tr\>\</table\>';
+sTipmdg= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Madagascar\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2392\<br\>Period:\<dataperiod/\>1982 - 2018\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>CYCLONES:  1566 Deaths; 1009 DataCards\<br\>EPIDEMIC:  401 Deaths; 690 DataCards\<br\>DROUGHT:  103 Deaths; 3 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>CYCLONES:  652174 Houses; 1009 DataCards\<br\>FLOOD:  8963 Houses; 25 DataCards\<br\>FIRE:  7279 Houses; 219 DataCards\</td\>\</tr\>\</table\>';
+sTipmwi= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Malawi\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1664\<br\>Period:\<dataperiod/\>1899 - 2018\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Flash Floods:  501 Deaths; 26 DataCards\<br\>Measles:  62 Deaths; 11 DataCards\<br\>Stormy Rains:  28 Deaths; 446 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Floods:  558774 Houses; 582 DataCards\<br\>Flash Floods:  140094 Houses; 26 DataCards\<br\>Stormy Rains:  55113 Houses; 446 DataCards\</td\>\</tr\>\</table\>';
+sTipmdv= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Maldives\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2073\<br\>Period:\<dataperiod/\>1894 - 2008\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>TSUNAMI:  77 Deaths; 205 DataCards\<br\>ACCIDENT:  29 Deaths; 32 DataCards\<br\>OTHER:  6 Deaths; 37 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>TSUNAMI:  4824 Houses; 205 DataCards\<br\>STORM:  3201 Houses; 801 DataCards\<br\>RAINS:  1168 Houses; 18 DataCards\</td\>\</tr\>\</table\>';
+sTipmli= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Mali\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 3765\<br\>Period:\<dataperiod/\>1906 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLOOD:  1314 Deaths; 833 DataCards\<br\>EPIDEMIC:  135 Deaths; 449 DataCards\<br\>FOWL SMALLPOX:  52 Deaths; 7 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  59153 Houses; 833 DataCards\<br\>FIRE:  501 Houses; 14 DataCards\<br\>WINDSTORM:  43 Houses; 2 DataCards\</td\>\</tr\>\</table\>';
+sTipmus= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Mauritius\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 3621\<br\>Period:\<dataperiod/\>1960 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ROAD ACCIDENTS:  1064 Deaths; 869 DataCards\<br\>AIRCRAFT DISASTER/MISSES:  161 Deaths; 2 DataCards\<br\>CYCLONES:  134 Deaths; 76 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>CYCLONES:  173408 Houses; 76 DataCards\<br\>TORRENTIAL RAINS:  2414 Houses; 1545 DataCards\<br\>FLASH FLOODS:  1645 Houses; 573 DataCards\</td\>\</tr\>\</table\>';
+sTipmex= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Mexico\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 42432\<br\>Period:\<dataperiod/\>1970 - 2013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE:  11719 Deaths; 687 DataCards\<br\>EPIDEMIC:  5952 Deaths; 2553 DataCards\<br\>POLLUTION:  4342 Deaths; 1387 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  1959622 Houses; 8105 DataCards\<br\>RAIN:  1405900 Houses; 3590 DataCards\<br\>EARTHQUAKE:  348723 Houses; 687 DataCards\</td\>\</tr\>\</table\>';
+sTipmng= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Mongolia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 3201\<br\>Period:\<dataperiod/\>2006 - 2019\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>WATER ACCIDENT:  505 Deaths; 506 DataCards\<br\>STRONG STORM:  92 Deaths; 299 DataCards\<br\>БИЧИЛ УУРХАЙ НУРАНГИНЫ ОСОЛ:  85 Deaths; 91 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>STRONG STORM:  193 Houses; 299 DataCards\<br\>BUILDING FIRE:  31 Houses; 325 DataCards\<br\>FLOOD:  21 Houses; 142 DataCards\</td\>\</tr\>\</table\>';
+sTipmne= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Montenegro\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 556\<br\>Period:\<dataperiod/\>1979 - 2022\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE:  101 Deaths; 16 DataCards\<br\>ACCIDENT TRAFFIC:  66 Deaths; 2 DataCards\<br\>STORM:  4 Deaths; 131 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  30096 Houses; 16 DataCards\<br\>HEAVY SNOW:  3872 Houses; 32 DataCards\<br\>FLOOD:  1264 Houses; 70 DataCards\</td\>\</tr\>\</table\>';
+sTipmar= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Morocco\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 732\<br\>Period:\<dataperiod/\>1960 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Tremblement de terre:  12641 Deaths; 8 DataCards\<br\>Inondation:  1360 Deaths; 84 DataCards\<br\>Feux:  196 Deaths; 11 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Inondation:  13494 Houses; 84 DataCards\<br\>Tremblement de terre:  13459 Houses; 8 DataCards\<br\>Feux de Forêts:  79 Houses; 629 DataCards\</td\>\</tr\>\</table\>';
+sTipmoz= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Mozambique\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 5076\<br\>Period:\<dataperiod/\>1979 - 2022\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>DROUGHT:  100579 Deaths; 927 DataCards\<br\>FLOOD:  21255 Deaths; 618 DataCards\<br\>EPIDEMIC:  7701 Deaths; 668 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>CYCLONE:  398410 Houses; 190 DataCards\<br\>FLOOD:  228932 Houses; 618 DataCards\<br\>FLASH FLOOD:  37569 Houses; 510 DataCards\</td\>\</tr\>\</table\>';
+sTipmmr= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Myanmar\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 43260\<br\>Period:\<dataperiod/\>1952 - 2020\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>CYCLONE:  171506 Deaths; 94 DataCards\<br\>OTHER:  1571 Deaths; 2087 DataCards\<br\>THUNDER LIGHTING STROKE:  1349 Deaths; 1335 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLASH FLOOD:  728932 Houses; 322 DataCards\<br\>FLOOD:  600268 Houses; 4243 DataCards\<br\>CYCLONE:  458181 Houses; 94 DataCards\</td\>\</tr\>\</table\>';
+sTipnpl= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Nepal\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 24257\<br\>Period:\<dataperiod/\>1971 - 2013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  16660 Deaths; 3516 DataCards\<br\>LANDSLIDE:  4658 Deaths; 3208 DataCards\<br\>FLOOD:  3538 Deaths; 3953 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  199736 Houses; 3953 DataCards\<br\>EARTHQUAKE:  91843 Houses; 227 DataCards\<br\>FIRE:  79800 Houses; 6004 DataCards\</td\>\</tr\>\</table\>';
+sTipnic= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Nicaragua\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1398\<br\>Period:\<dataperiod/\>1992 - 2013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>LANDSLIDE:  2044 Deaths; 47 DataCards\<br\>FLOOD:  401 Deaths; 467 DataCards\<br\>TSUNAMI:  100 Deaths; 9 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  37126 Houses; 467 DataCards\<br\>SPATE:  5067 Houses; 83 DataCards\<br\>LANDSLIDE:  4393 Houses; 47 DataCards\</td\>\</tr\>\</table\>';
+sTipner= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Niger\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 25607\<br\>Period:\<dataperiod/\>1973 - 2021\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  11753 Deaths; 2191 DataCards\<br\>SOCIAL CONFLICTS:  730 Deaths; 377 DataCards\<br\>FLOOD:  288 Deaths; 2885 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  133304 Houses; 2885 DataCards\<br\>FIRE:  534 Houses; 96 DataCards\<br\>SOCIAL CONFLICTS:  105 Houses; 377 DataCards\</td\>\</tr\>\</table\>';
+sTip019= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Orissa (India)\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 12936\<br\>Period:\<dataperiod/\>1970 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>CYCLONE:  21112 Deaths; 542 DataCards\<br\>EPIDEMIC:  19963 Deaths; 1819 DataCards\<br\>ELECTRIC STORM:  5351 Deaths; 2507 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>CYCLONE:  2804437 Houses; 542 DataCards\<br\>FLOOD:  2356437 Houses; 1311 DataCards\<br\>FIRE:  541562 Houses; 5202 DataCards\</td\>\</tr\>\</table\>';
+sTippac= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Pacific Islands (PDN)\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1309\<br\>Period:\<dataperiod/\>1567 - 2021\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EQ - Earthquake:  6609 Deaths; 204 DataCards\<br\>VO - Volcano:  4111 Deaths; 86 DataCards\<br\>TS - Tsunami:  3510 Deaths; 221 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>TC - Tropical Cyclone:  204037 Houses; 465 DataCards\<br\>FL - Flood:  23665 Houses; 128 DataCards\<br\>SS - Storm Surge:  8885 Houses; 13 DataCards\</td\>\</tr\>\</table\>';
+sTippak= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Pakistan\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 7277\<br\>Period:\<dataperiod/\>1980 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EARTHQUAKE:  47140 Deaths; 355 DataCards\<br\>FLOOD:  28916 Deaths; 2105 DataCards\<br\>RAINS:  23565 Deaths; 1468 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>RAINS:  2746045 Houses; 1468 DataCards\<br\>FLOOD:  2490516 Houses; 2105 DataCards\<br\>EARTHQUAKE:  615638 Houses; 355 DataCards\</td\>\</tr\>\</table\>';
+sTippse= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Palestine\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 461\<br\>Period:\<dataperiod/\>1980 - 2013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>STRUCTURE:  18 Deaths; 18 DataCards\<br\>EPIDEMIC:  18 Deaths; 35 DataCards\<br\>RAINS:  16 Deaths; 25 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  592 Houses; 82 DataCards\<br\>STORM:  218 Houses; 46 DataCards\<br\>RAINS:  26 Houses; 25 DataCards\</td\>\</tr\>\</table\>';
+sTippan= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Panama\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 7980\<br\>Period:\<dataperiod/\>1933 - 2020\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>AHOGAMIENTO:  1364 Deaths; 1265 DataCards\<br\>EPIDEMIC:  228 Deaths; 32 DataCards\<br\>FLOOD:  150 Deaths; 1903 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  92183 Houses; 1903 DataCards\<br\>POLLUTION:  12671 Houses; 10 DataCards\<br\>STRONGWIND:  9571 Houses; 524 DataCards\</td\>\</tr\>\</table\>';
+sTippry= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Paraguay\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2531\<br\>Period:\<dataperiod/\>1978 - 2017\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  494 Deaths; 442 DataCards\<br\>OTHER:  100 Deaths; 6 DataCards\<br\>FLOOD:  94 Deaths; 498 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  63427 Houses; 498 DataCards\<br\>STORM:  47564 Houses; 520 DataCards\<br\>HAILSTORM:  30781 Houses; 94 DataCards\</td\>\</tr\>\</table\>';
+sTipper= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Peru\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 22099\<br\>Period:\<dataperiod/\>1970 - 2013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ALLUVION:  20819 Deaths; 2002 DataCards\<br\>EARTHQUAKE:  14845 Deaths; 1155 DataCards\<br\>EPIDEMIC:  3390 Deaths; 1488 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  260278 Houses; 3508 DataCards\<br\>EARTHQUAKE:  257564 Houses; 1155 DataCards\<br\>ALLUVION:  26540 Houses; 2002 DataCards\</td\>\</tr\>\</table\>';
+sTiprwa= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Rwanda\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 323\<br\>Period:\<dataperiod/\>2016\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>LIGHTNING:  23 Deaths; 30 DataCards\<br\>LANDSLIDES:  5 Deaths; 5 DataCards\<br\>RAINSTORM:  3 Deaths; 220 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>RAINSTORM:  1406 Houses; 220 DataCards\<br\>EARTHQUAKE:  207 Houses; 9 DataCards\<br\>HAILSTORM:  126 Houses; 9 DataCards\</td\>\</tr\>\</table\>';
+sTipkna= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Saint Kitts and Nevis\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 506\<br\>Period:\<dataperiod/\>1626 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  4811 Deaths; 3 DataCards\<br\>CONFLICT:  2000 Deaths; 1 DataCards\<br\>ACCIDENT:  245 Deaths; 5 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>HURRICANE:  2127 Houses; 139 DataCards\<br\>FIRE:  15 Houses; 33 DataCards\<br\>WINDSTORM:  0 Houses; 57 DataCards\</td\>\</tr\>\</table\>';
+sTiplca= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Saint Lucia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 223\<br\>Period:\<dataperiod/\>1760 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  1381 Deaths; 14 DataCards\<br\>Hurricane:  877 Deaths; 42 DataCards\<br\>LANDSLIDE:  97 Deaths; 21 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Hurricane:  1872 Houses; 42 DataCards\<br\>FIRE:  1666 Houses; 14 DataCards\<br\>LANDSLIDE:  804 Houses; 21 DataCards\</td\>\</tr\>\</table\>';
+sTipvct= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Saint Vincent and the Grenadines\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 279\<br\>Period:\<dataperiod/\>1718 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  2000 Deaths; 3 DataCards\<br\>ERUPTION:  1623 Deaths; 9 DataCards\<br\>HURRICANE:  306 Deaths; 50 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>HURRICANE:  2901 Houses; 50 DataCards\<br\>STORM:  1566 Houses; 32 DataCards\<br\>FLOOD:  681 Houses; 47 DataCards\</td\>\</tr\>\</table\>';
+sTipsen= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Senegal\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 7493\<br\>Period:\<dataperiod/\>1980 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>SINKING:  2076 Deaths; 43 DataCards\<br\>ROAD ACCIDENT:  906 Deaths; 4278 DataCards\<br\>DROWNING:  726 Deaths; 468 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  69230 Houses; 149 DataCards\<br\>FIRE:  946 Houses; 348 DataCards\<br\>STRUCTURAL COLLAPSE:  211 Houses; 144 DataCards\</td\>\</tr\>\</table\>';
+sTipsrb= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Serbia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2283\<br\>Period:\<dataperiod/\>1980 - 2022\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  131 Deaths; 282 DataCards\<br\>EXPLOSION:  59 Deaths; 26 DataCards\<br\>FLOOD:  55 Deaths; 565 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  59731 Houses; 565 DataCards\<br\>EARTHQUAKE:  14992 Houses; 2 DataCards\<br\>HAILSTORM:  11928 Houses; 266 DataCards\</td\>\</tr\>\</table\>';
+sTipsyc= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Seychelles\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 664\<br\>Period:\<dataperiod/\>1980 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>LANDSLIDE:  5 Deaths; 94 DataCards\<br\>SHARK ATTACK:  2 Deaths; 2 DataCards\<br\>TSUNAMI:  2 Deaths; 23 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  1528 Houses; 135 DataCards\<br\>TSUNAMI:  345 Houses; 23 DataCards\<br\>LANDSLIDE:  334 Houses; 94 DataCards\</td\>\</tr\>\</table\>';
+sTipsle= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Sierra Leone\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1043\<br\>Period:\<dataperiod/\>2006 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Epidemic:  1251 Deaths; 496 DataCards\<br\>Accident:  418 Deaths; 174 DataCards\<br\>Landslide:  57 Deaths; 16 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Fire:  1797 Houses; 241 DataCards\<br\>Storm/Gale:  1598 Houses; 42 DataCards\<br\>Flood:  1130 Houses; 55 DataCards\</td\>\</tr\>\</table\>';
+sTipesp= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Spain\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 22085\<br\>Period:\<dataperiod/\>1 - 2010\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLOOD:  24318 Deaths; 19751 DataCards\<br\>HEAVY RAIN:  37 Deaths; 855 DataCards\<br\>STORM:  28 Deaths; 1435 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  113710 Houses; 19751 DataCards\<br\>STORM:  8960 Houses; 1435 DataCards\<br\>HEAVY RAIN:  1485 Houses; 855 DataCards\</td\>\</tr\>\</table\>';
+sTiplka= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Sri Lanka\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 130134\<br\>Period:\<dataperiod/\>1965 - 2020\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>TSUNAMI:  30959 Deaths; 88 DataCards\<br\>LANDSLIDE:  1081 Deaths; 2256 DataCards\<br\>ANIMAL ATTACK:  1010 Deaths; 10905 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  243655 Houses; 8219 DataCards\<br\>CYCLONE:  129783 Houses; 123 DataCards\<br\>STRONG WIND:  113479 Houses; 6030 DataCards\</td\>\</tr\>\</table\>';
+sTipsyr= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Syria\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 7326\<br\>Period:\<dataperiod/\>1980 - 2009\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FIRE:  568 Deaths; 2833 DataCards\<br\>FOREST FIRE:  28 Deaths; 3204 DataCards\<br\>FLASH FLOOD:  22 Deaths; 8 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>RAINS:  702 Houses; 383 DataCards\<br\>FLASH FLOOD:  453 Houses; 8 DataCards\<br\>FIRE:  187 Houses; 2833 DataCards\</td\>\</tr\>\</table\>';
+sTip033= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Tamil Nadu (India)\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 16147\<br\>Period:\<dataperiod/\>1968 - 2011\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>TSUNAMI:  2541 Deaths; 86 DataCards\<br\>ACCIDENT:  1649 Deaths; 1013 DataCards\<br\>RAINS:  1162 Deaths; 3104 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  740592 Houses; 3201 DataCards\<br\>RAINS:  301857 Houses; 3104 DataCards\<br\>CYCLONE:  128321 Houses; 66 DataCards\</td\>\</tr\>\</table\>';
+sTiptls= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Timor Leste\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1577\<br\>Period:\<dataperiod/\>1992 - 2017\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLOOD:  46 Deaths; 287 DataCards\<br\>RAINS:  21 Deaths; 5 DataCards\<br\>CONFLICT:  14 Deaths; 25 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>CONFLICT:  41006 Houses; 25 DataCards\<br\>FLOOD:  12712 Houses; 287 DataCards\<br\>STRONG WIND:  4303 Houses; 770 DataCards\</td\>\</tr\>\</table\>';
+sTiptgo= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Togo\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 514\<br\>Period:\<dataperiod/\>1960 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Flood:  1582 Deaths; 136 DataCards\<br\>Epidemics:  659 Deaths; 11 DataCards\<br\>Fire:  466 Deaths; 195 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Flood:  24751 Houses; 136 DataCards\<br\>Coastal Erosion:  22129 Houses; 3 DataCards\<br\>Tornado:  2412 Houses; 91 DataCards\</td\>\</tr\>\</table\>';
+sTiptto= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Trinidad and Tobago\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1913\<br\>Period:\<dataperiod/\>1899 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>OTHER:  125 Deaths; 33 DataCards\<br\>EPIDEMIC:  101 Deaths; 10 DataCards\<br\>FLOOD:  17 Deaths; 205 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  137 Houses; 205 DataCards\<br\>STORM:  133 Houses; 52 DataCards\<br\>FIRE:  90 Houses; 34 DataCards\</td\>\</tr\>\</table\>';
+sTiptun= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Tunisia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2167\<br\>Period:\<dataperiod/\>1982 - 2013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLOOD:  258 Deaths; 395 DataCards\<br\>EPIDEMIC:  167 Deaths; 123 DataCards\<br\>FIRE:  51 Deaths; 87 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  39756 Houses; 395 DataCards\<br\>EARTHQUAKE:  2523 Houses; 20 DataCards\<br\>LANDSLIDE:  137 Houses; 13 DataCards\</td\>\</tr\>\</table\>';
+sTiptur= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Turkey\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 6486\<br\>Period:\<dataperiod/\>1894 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Earthquake:  94081 Deaths; 246 DataCards\<br\>Traffic accident:  1376 Deaths; 279 DataCards\<br\>Mining accidents:  1036 Deaths; 39 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Earthquake:  1292292 Houses; 246 DataCards\<br\>Flood:  28415 Houses; 249 DataCards\<br\>Landslide:  22121 Houses; 979 DataCards\</td\>\</tr\>\</table\>';
+sTipuga= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Uganda\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 4847\<br\>Period:\<dataperiod/\>1933 - 2020\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>ACCIDENT:  9713 Deaths; 243 DataCards\<br\>LANDSLIDE:  2718 Deaths; 332 DataCards\<br\>EPIDEMIC:  2524 Deaths; 284 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  65458 Houses; 1331 DataCards\<br\>EARTHQUAKE:  10458 Houses; 17 DataCards\<br\>FIRE:  8415 Houses; 270 DataCards\</td\>\</tr\>\</table\>';
+sTiptza= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>United Republic  of Tanzania\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1262\<br\>Period:\<dataperiod/\>1872 - 2021\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>MARINE ACCIDENT:  1761 Deaths; 59 DataCards\<br\>EPIDEMIC:  1003 Deaths; 110 DataCards\<br\>FLOOD:  876 Deaths; 419 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  128466 Houses; 419 DataCards\<br\>EARTHQUAKE:  27808 Houses; 16 DataCards\<br\>EXPLOSION:  11212 Houses; 5 DataCards\</td\>\</tr\>\</table\>';
+sTipury= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Uruguay\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 4877\<br\>Period:\<dataperiod/\>1959 - 2014\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Siniestros de tránsito:  295 Deaths; 86 DataCards\<br\>FIRE:  277 Deaths; 1232 DataCards\<br\>Accidente de transporte:  164 Deaths; 30 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  48416 Houses; 686 DataCards\<br\>STORM:  25134 Houses; 1161 DataCards\<br\>Inundación gradual:  4310 Houses; 128 DataCards\</td\>\</tr\>\</table\>';
+sTip005= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Uttarakhand (India)\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 3945\<br\>Period:\<dataperiod/\>1984 - 3013\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>RAINS:  5560 Deaths; 1468 DataCards\<br\>Road Accident:  2171 Deaths; 1368 DataCards\<br\>LANDSLIDE:  767 Deaths; 301 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>RAINS:  28902 Houses; 1468 DataCards\<br\>LANDSLIDE:  3058 Houses; 301 DataCards\<br\>CLOUD BURST:  582 Houses; 23 DataCards\</td\>\</tr\>\</table\>';
+sTipven= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Venezuela\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 7178\<br\>Period:\<dataperiod/\>201 - 2015\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  11327 Deaths; 175 DataCards\<br\>SPATE:  929 Deaths; 90 DataCards\<br\>LANDSLIDE:  850 Deaths; 1466 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  94453 Houses; 2417 DataCards\<br\>SPATE:  68089 Houses; 90 DataCards\<br\>EPIDEMIC:  24540 Houses; 175 DataCards\</td\>\</tr\>\</table\>';
+sTipvnm= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Vietnam\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 1470\<br\>Period:\<dataperiod/\>1989 - 2019\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>Flood:  6762 Deaths; 716 DataCards\<br\>Hailstorm:  762 Deaths; 307 DataCards\<br\>Flash flood:  725 Deaths; 106 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>Flood:  481223 Houses; 716 DataCards\<br\>Storm:  397287 Houses; 185 DataCards\<br\>Rain:  162294 Houses; 18 DataCards\</td\>\</tr\>\</table\>';
+sTipyem= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Yemen\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 6723\<br\>Period:\<dataperiod/\>1979 - 2022\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>EPIDEMIC:  3736 Deaths; 5416 DataCards\<br\>EARTHQUAKE:  2510 Deaths; 38 DataCards\<br\>LIQUEFACTION:  330 Deaths; 333 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>EARTHQUAKE:  21336 Houses; 38 DataCards\<br\>LIQUEFACTION:  15869 Houses; 333 DataCards\<br\>FLOOD:  9248 Houses; 85 DataCards\</td\>\</tr\>\</table\>';
+sTipzmb= '\<table width=450 border=\"0\"\>\<tr\>\<td class=\"DI_TableHeader\"\>\<strong\>Zambia\</strong\>\</td\>\</tr\>\<tr\>\<td class=\'bss\' \>\<br\>\<strong\>Summary:\</strong\>\<br\>DataCards: 2169\<br\>Period:\<dataperiod/\>1999 - 2017\<br\>\<br\>\<strong\>Highest Mortality:\</strong\> \<br\>FLOOD:  20 Deaths; 433 DataCards\<br\>STURTURAL COLLAPSE:  10 Deaths; 33 DataCards\<br\>STORM:  7 Deaths; 91 DataCards\<br\>\<strong\>Highest Housing Damages:\</strong\> \<br\>FLOOD:  4977 Houses; 433 DataCards\<br\>FIRE:  2072 Houses; 21 DataCards\<br\>STORM:  837 Houses; 91 DataCards\</td\>\</tr\>\</table\>';
+
+</script>
+
+
+
+ <table id="footertable" width = "1000" border="0">
+        <tr> 
+		  <td valign="top" align="left"> <a href="http://www.unisdr.org"><img border="0" alt="UNDRR site" height="32" width="100" src="/DesInventar/images/logo-isdr.png"></a></td>
+          <td valign="top" ><div align="center"><A href="mailto:sengupta AT un.org"><font face="Comic Sans MS"><IMG align=absMiddle alt="e-mail us" border=0 src="/DesInventar/images/escrivenos.gif"></font></a></div></td>
+<!--
+          <td valign="top" align="center"><a href="http://www.undp.org/"><img src="/DesInventar/images/undp.gif" border="0"  alt="UNDP"></a>&nbsp;&nbsp;&nbsp;</td>
+-->
+          <td valign="top" align="right"><a href="https://www.desinventar.net"><img src="/DesInventar/images/di_logo_STD.png" alt="DesInventar Open Source Server" border="0" height="32"/></a>
+          </td>
+ 
+
+        </tr> 
+ </table>
+
+<script language="javascript">
+// check that this is running as a portlet. If so, remove the headers and footer.
+if (window!=window.top)
+	{
+	document.getElementById("topnavigation").style.display='none';
+	document.getElementById("topheader").style.display='none';
+	document.getElementById("footertable").style.display='none';
+	}
+</script>
+<br>
+</body>
+</html>
