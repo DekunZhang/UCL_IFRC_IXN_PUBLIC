@@ -21,4 +21,4 @@ if __name__ == '__main__':
         r = requests.get(new_url)
         with open(filename, 'wb') as f:
             f.write(r.content)
-        time.sleep(1)
+        time.sleep(0.1)
