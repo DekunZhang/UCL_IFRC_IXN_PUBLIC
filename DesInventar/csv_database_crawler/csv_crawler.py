@@ -14,7 +14,7 @@ from .Disasters import Disaster, Disasters
 class CSVCrawler:
     COUNTRY_CACHE_FILE = 'country_list.pkl'
     DISASTERS_CACHE_FILE = 'disasters.pkl'
-    DATABASES_DIRECTORY = f"{os.getcwd()}/CSVdatabases"
+    DATABASES_DIRECTORY = f"{os.path.dirname(os.path.realpath(__file__))}/CSVdatabases"
 
     def __init__(self):
         self.__index_url = "https://www.desinventar.net/DesInventar/index.jsp"

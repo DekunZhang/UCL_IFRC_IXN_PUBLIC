@@ -3,7 +3,7 @@ from itertools import groupby
 import requests
 import time
 import os
-from XMLdatabase_downloader.GLOBAL_VARS import countries
+from ..XMLdatabase_downloader.GLOBAL_VARS import countries
 
 
 def get_actual_url(code: str, is_querying_disaster_type: bool, disaster_name: str = None):

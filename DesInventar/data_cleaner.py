@@ -4,8 +4,9 @@ from pathlib import Path
 
 SOURCE_DIRECTORY = "CSVdatabases"
 TARGET_DIRECTORY = "cleaned_databases"
-DATABASES_FOLDER = f"{os.getcwd()}/{SOURCE_DIRECTORY}"
-CLEANED_FOLDER = f"{os.getcwd()}/{TARGET_DIRECTORY}"
+CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
+DATABASES_FOLDER = f"{CURRENT_DIRECTORY}/{SOURCE_DIRECTORY}"
+CLEANED_FOLDER = f"{CURRENT_DIRECTORY}/{TARGET_DIRECTORY}"
 
 
 def clean_file_contents(contents: list[str]):

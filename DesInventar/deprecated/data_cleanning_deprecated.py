@@ -1,4 +1,4 @@
-from XMLdatabase_downloader.GLOBAL_VARS import countries
+from ..XMLdatabase_downloader.GLOBAL_VARS import countries
 import os
 
 
