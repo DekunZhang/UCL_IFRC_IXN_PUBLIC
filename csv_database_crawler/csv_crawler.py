@@ -65,8 +65,9 @@ class CSVCrawler:
         for country in country_list:
             html_text = CSVCrawler.get_html_text(country.get_url())
             soup = BeautifulSoup(html_text, "lxml")
-            disaster_selection = soup.find("select", name_="eventos")
-            print(disaster_selection)
+            disaster_selection = soup.find("select", attrs={"name": "eventos"})
+            disasters_cleaned = CSVCrawler.remove_newlines(disaster_selection.contents)
+            
 
     def run(self):
-        country_list = self.__get_country_list()
+        self.__set_disaster_types_for_all_countries()
