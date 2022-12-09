@@ -7,7 +7,8 @@ from GLOBAL_VARS import countries
 base_url = "https://www.desinventar.net/DesInventar/download/DI_export_"
 
 if __name__ == '__main__':
-    directory = "./XMLdatabase"
+    CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
+    directory = f"{CURRENT_DIRECTORY}/XMLdatabase"
     if not os.path.exists(directory):
         os.makedirs(directory)
     for i, (code, country) in enumerate(countries):
