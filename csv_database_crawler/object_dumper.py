@@ -24,3 +24,6 @@ class Dumper:
             raise FileNotFoundError(f"Object cache with name '{name}' does not exist.")
         with open(self.__get_cache_path(name), 'rb') as f:
             return dill.load(f)
+
+    def get_cache_folder(self):
+        return self.__cache_folder
