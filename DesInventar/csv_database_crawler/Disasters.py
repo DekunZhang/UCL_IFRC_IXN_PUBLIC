@@ -1,5 +1,3 @@
-from itertools import groupby
-
 from .Country import Country
 
 
@@ -33,7 +31,8 @@ class Disasters:
         for i, d in enumerate(self.__disaster_list):
             total_count = disaster_names_list.count(d.name.upper())
             count = disaster_names_list[:i].count(d.name.upper())
-            d.set_new_name(f"{d.name}_{str(count + 1)}" if total_count > 1 else d.name)
+            d.set_new_name(
+                f"{d.name}_{str(count + 1)}" if total_count > 1 else d.name)
 
     def __iter__(self):
         return iter(self.__disaster_list)

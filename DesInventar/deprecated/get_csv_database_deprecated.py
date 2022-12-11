@@ -6,7 +6,8 @@ import os
 from ..XMLdatabase_downloader.GLOBAL_VARS import countries
 
 
-def get_actual_url(code: str, is_querying_disaster_type: bool, disaster_name: str = None):
+def get_actual_url(code: str, is_querying_disaster_type: bool,
+                   disaster_name: str = None):
     # actual_url = base_url + COUNTRY_CODE + middle_url + (query_disaster_stat | query_data_stat)
     # + latter_url + (query_disaster_name | (query_data + disaster_name))
     base_url = "https://www.desinventar.net/DesInventar/stats_spreadsheet.jsp?bookmark=1&countrycode="
@@ -19,8 +20,10 @@ def get_actual_url(code: str, is_querying_disaster_type: bool, disaster_name: st
                  "fichas.damnificados,fichas.afectados,fichas.reubicados,fichas.evacuados,fichas.valorus," \
                  "fichas.valorloc,fichas.nescuelas,fichas.nhospitales,fichas.nhectareas,fichas.cabezas," \
                  "fichas.kmvias&_eventos="
-    return base_url + code + middle_url + (query_disaster_stat if is_querying_disaster_type else query_data_stat) \
-        + latter_url + (query_disaster_name if is_querying_disaster_type else query_data + disaster_name)
+    return base_url + code + middle_url + (
+        query_disaster_stat if is_querying_disaster_type else query_data_stat) \
+        + latter_url + (
+            query_disaster_name if is_querying_disaster_type else query_data + disaster_name)
 
 
 def get_disaster_csv(code, disaster_filename):

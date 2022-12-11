@@ -26,7 +26,8 @@ def main():
         with os.scandir(source_folder) as it:
             for source_file in it:
                 cleaned_contents = clean_file(source_file.path)
-                target_file = source_file.path.replace("CSVdatabases", "cleaned_output")
+                target_file = source_file.path.replace("CSVdatabases",
+                                                       "cleaned_output")
                 with open(target_file, "w") as tf:
                     tf.writelines(cleaned_contents)
 

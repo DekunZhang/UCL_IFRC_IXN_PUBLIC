@@ -3,7 +3,6 @@ import time
 import os
 from GLOBAL_VARS import countries
 
-
 base_url = "https://www.desinventar.net/DesInventar/download/DI_export_"
 
 if __name__ == '__main__':

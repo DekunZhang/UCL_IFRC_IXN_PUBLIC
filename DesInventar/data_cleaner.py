@@ -16,7 +16,8 @@ def clean_file_contents(contents: list[str]):
 def clean_all_databases():
     database_files = glob(f"{DATABASES_FOLDER}/**/*.csv")
     for raw_data_file in database_files:
-        target_directory = os.path.dirname(raw_data_file).replace(SOURCE_DIRECTORY, TARGET_DIRECTORY)
+        target_directory = os.path.dirname(raw_data_file).replace(
+            SOURCE_DIRECTORY, TARGET_DIRECTORY)
         target_file = raw_data_file.replace(SOURCE_DIRECTORY, TARGET_DIRECTORY)
         if not os.path.exists(target_directory):
             os.makedirs(target_directory)
