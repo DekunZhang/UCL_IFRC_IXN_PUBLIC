@@ -53,27 +53,28 @@ class CSVCrawler:
         self.__dumper.cache(country_list, CSVCrawler.COUNTRY_CACHE_FILE)
         return country_list
 
-    def __get_disasters(self, country):
+    def __get_disasters(self, country, ignore_cache: int):
         cache_name = f"disasters/{country.get_name()}_" \
-                         f"{country.get_country_code()}.pkl"
+                     f"{country.get_country_code()}.pkl"
         return self.__dumper.load(cache_name) \
-            if self.__dumper.has_cache(cache_name) \
+            if self.__dumper.has_cache(cache_name) and ignore_cache <= 1 \
             else self.__retrieve_disaster_types(country)
 
-    def __make_country_disasters_dict(self, country_list):
+    def __make_country_disasters_dict(self, country_list, ignore_cache: int):
         country_disasters_dict = {}
         for country in country_list:
-            disasters = self.__get_disasters(country)
+            disasters = self.__get_disasters(country, ignore_cache)
             logging.info(f"Adding disasters for {country.get_name()}")
             country_disasters_dict[country] = disasters
         return country_disasters_dict
 
-    def __get_disaster_types_for_all_countries(self):
+    def __get_disaster_types_for_all_countries(self, ignore_cache: int):
         country_list = self.__dumper.load(CSVCrawler.COUNTRY_CACHE_FILE) \
             if self.__dumper.has_cache(CSVCrawler.COUNTRY_CACHE_FILE) \
+            and ignore_cache <= 2 \
             else self.__retrieve_country_list()
         country_disasters_dict = \
-            self.__make_country_disasters_dict(country_list)
+            self.__make_country_disasters_dict(country_list, ignore_cache)
         self.__dumper.cache(country_disasters_dict,
                             CSVCrawler.DISASTERS_CACHE_FILE)
         return country_disasters_dict
@@ -128,9 +129,10 @@ class CSVCrawler:
             + disaster.query_key
 
     @staticmethod
-    def download_disaster_csv(country, disaster, saving_directory):
+    def download_disaster_csv(country, disaster, saving_directory,
+                              ignore_exist_databases=False):
         filepath = f"{saving_directory}/{disaster.name}.csv"
-        if os.path.exists(filepath):
+        if os.path.exists(filepath) and not ignore_exist_databases:
             logging.info(f"Exist: {filepath}, skip")
             return
         logging.info(f"Downloading: {filepath}")
@@ -140,21 +142,31 @@ class CSVCrawler:
         time.sleep(0.1)
 
     @staticmethod
-    def download_country_data(country, disasters):
+    def download_country_data(country, disasters,
+                              ignore_exist_databases=False):
         saving_directory = f"{CSVCrawler.DATABASES_DIRECTORY}/" \
-                            f"{country.get_name()}_" \
-                            f"{country.get_country_code()}"
+                           f"{country.get_name()}_" \
+                           f"{country.get_country_code()}"
         if not os.path.exists(saving_directory):
             os.makedirs(saving_directory)
         for disaster in disasters:
             CSVCrawler.download_disaster_csv(country, disaster,
-                                             saving_directory)
+                                             saving_directory,
+                                             ignore_exist_databases)
 
-    def run(self):
+    def __get_country_disaster_dict(self, ignore_cache):
+        return self.__dumper.load(CSVCrawler.DISASTERS_CACHE_FILE) \
+                if self.__dumper.has_cache(CSVCrawler.DISASTERS_CACHE_FILE) \
+                and ignore_cache == 0 \
+                else self.__get_disaster_types_for_all_countries(ignore_cache)
+
+    def run(self, mode=0):
+        if mode not in range(8):
+            raise ValueError("Wrong mode number, should be in 0-7")
         logging.basicConfig(level=logging.INFO)
-        country_disasters_dict = self.__dumper.load(
-            CSVCrawler.DISASTERS_CACHE_FILE) \
-            if self.__dumper.has_cache(CSVCrawler.DISASTERS_CACHE_FILE) \
-            else self.__get_disaster_types_for_all_countries()
+        ignore_exist_databases = mode & 4 == 1
+        ignore_cache = mode & 3
+        country_disasters_dict = self.__get_country_disaster_dict(ignore_cache)
         for country, disasters in country_disasters_dict.items():
-            CSVCrawler.download_country_data(country, disasters)
+            CSVCrawler.download_country_data(country, disasters,
+                                             ignore_exist_databases)
