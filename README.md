@@ -31,7 +31,7 @@ Modify the 5th line of `get_csv_databases.py` to:
 existing spreadsheets and last two bits determine the level of ignoring of
 caches.
 
-Let `ignore_cache = mode & 0b011`
+Let `ignore_cache = mode & 0b011`  
 If `ignore_cache` is greater than 0, the crawler will ignore cache in 
 `caches/disasters.pkl`. If `ignore_cache` is greater than 1, the crawler will 
 ignore cache in `caches/disasters.pkl` and `caches/disasters/*`. 
