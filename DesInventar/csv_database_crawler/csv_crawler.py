@@ -164,8 +164,8 @@ class CSVCrawler:
         if mode not in range(8):
             raise ValueError("Wrong mode number, should be in 0-7")
         logging.basicConfig(level=logging.INFO)
-        ignore_exist_databases = mode & 4 == 1
-        ignore_cache = mode & 3
+        ignore_exist_databases = mode & 0b100 == 1
+        ignore_cache = mode & 0b011
         country_disasters_dict = self.__get_country_disaster_dict(ignore_cache)
         for country, disasters in country_disasters_dict.items():
             CSVCrawler.download_country_data(country, disasters,
